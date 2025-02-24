@@ -1,7 +1,21 @@
 ## Usage
 
-0. Clone this repo `git clone https://github.com/<YOURUSERNAME>/daily_cli_learning.git`
-1. Setup virtual environment: `python -m venv .venv`
+0. Clone this repo: 
+```bash
+git clone https://github.com/<YOURUSERNAME>/daily_cli_learning.git
+```
+
+1. Setup and activate virtual environment:
+```bash
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+# Mac/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the quiz: `python main.py`
 
@@ -21,6 +35,4 @@ Also: I think the best way to use this is as something to do everyday, so I reco
 4. Navigate to your repository and select the `main.py` file
 
 ### linux
-0. Open your terminal
-1. Create a desktop entry file: `nano ~/.config/autostart/cli_quiz.desktop`
-2. Add the following content:
+You probably don't need to practice this stuff
