@@ -26,14 +26,14 @@ source .venv/bin/activate
 I think the best way to use this is as something to do everyday, so I recommend adding it to your daily startup applications. Here's how you do that
 
 ### windows
-1. hit "win + r"
-2. type in "shell:startup" and hit enter
-3. Right click anywhere in the folder, click 'new', then 'Shortcut'
-4. Enter your repository path (enter 'pwd' into your command line to get the current directory)
+1. hit `win + r`
+2. type in `shell:startup` and hit enter
+3. Right click anywhere in the folder, click `new`, then `Shortcut`
+4. Enter your repository path (enter `pwd` into your command line to get the current directory)
 
 ### mac
 1. Open System Preferences
 2. Go to Users & Groups
 3. Select your user and click Login Items
-4. Click the '+' button to add a new item
+4. Click the `+` button to add a new item
 5. Navigate to your repository and select the `main.py` file
