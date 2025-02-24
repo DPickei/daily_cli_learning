@@ -1,0 +1,11 @@
+questions:
+  - action: list all files in current directory
+    answer: ls
+  - action: change directory to parent folder
+    answer: cd ..
+  - action: create a new directory called 'test'
+    answer: mkdir test
+  - action: show current working directory
+    answer: pwd
+  - action: remove a file called 'temp.txt'
+    answer: rm temp.txt 

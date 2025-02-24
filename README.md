@@ -2,7 +2,7 @@
 
 1. Clone this repo: 
 ```bash
-git clone https://github.com/<YOURUSERNAME>/daily_cli_learning.git
+git clone https://github.com/DPickei/daily_cli_learning.git
 ```
 
 2. Setup and activate virtual environment:
