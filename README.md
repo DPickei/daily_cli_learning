@@ -17,7 +17,9 @@ source .venv/bin/activate
 ```
 
 3. Install dependencies: `pip install -r requirements.txt`
-4. Run the quiz: `python main.py`
+4. Create a `questions.yaml` file and fill it with questions / answers
+    * see `example_questions.yaml` for reference
+5. Run the quiz: `python main.py`
 
 ## Run it daily
 
