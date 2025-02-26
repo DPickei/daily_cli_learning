@@ -45,33 +45,31 @@ class CLIQuiz:
             for action, correct_answer in self.questions:
                 tries = 3
                 while tries > 0:
-                    print(f"\n╔══════════════════════════════════════════╗")
-                    print(f"║ Action: {action:<36} ║")
-                    print(f"╚══════════════════════════════════════════╝\n")
+                    # Make the action box more compact and centered
+                    print("\nAction:")
+                    print("╔" + "═" * 60 + "╗")
+                    print("║ " + action.center(58) + " ║")
+                    print("╚" + "═" * 60 + "╝\n")
+                    
                     answer = input("Your answer: ").strip()
                     
                     if answer.lower() == 'skip':
                         self.wrong_answers.append((action, correct_answer, "skipped"))
-                        print("\n" + "-"*50)
+                        print("\n" + "─" * 50)
                         break
                     
                     if answer == correct_answer:
-                        print("\n╔══════════════════════════════════════════╗")
-                        print("║            ✓ Correct!                     ║")
-                        print(f"╚══════════════════════════════════════════╝\n")
+                        print("\n✓ Correct!\n")
                         self.correct_answers.append((action, correct_answer))
                         break
                     else:
                         tries -= 1
                         if tries > 0:
-                            print("\n╔══════════════════════════════════════════╗")
-                            print("║            ✗ Incorrect                    ║")
-                            print(f"║ The correct answer is: {correct_answer:<20} ║")
-                            print("║ Press 'r' to try again                   ║")
-                            print("║ Press any other key to continue         ║")
-                            print(f"║ Attempts remaining: {tries:<20} ║")
-                            print(f"╚══════════════════════════════════════════╝\n")
-                            print("Waiting for key press...")
+                            print("\n✗ Incorrect!")
+                            print(f"The correct answer is: {correct_answer}")
+                            print(f"Attempts remaining: {tries}")
+                            print("\nPress 'r' to try again")
+                            print("Press any other key to continue\n")
                             
                             key = msvcrt.getch().decode().lower()
                             if key != 'r':
@@ -79,15 +77,13 @@ class CLIQuiz:
                                 break
                             
                             # Clear all previous output if retrying
-                            self.clear_previous_lines(12)  # Clear the error message box and previous answer
+                            self.clear_previous_lines(9)  # Adjusted for new format
                         else:
-                            print("\n╔══════════════════════════════════════════╗")
-                            print("║            ✗ Incorrect                    ║")
-                            print(f"║ The correct answer is: {correct_answer:<20} ║")
-                            print("║ No attempts remaining                    ║")
-                            print(f"╚══════════════════════════════════════════╝\n")
+                            print("\n✗ Incorrect!")
+                            print(f"The correct answer is: {correct_answer}")
+                            print("No attempts remaining\n")
                             self.wrong_answers.append((action, correct_answer, answer))
-                print("="*50)
+                print("═" * 50)
 
         except KeyboardInterrupt:
             print("\n\nQuiz interrupted. Here's your summary:")
